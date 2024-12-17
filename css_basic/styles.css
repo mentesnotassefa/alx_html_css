@@ -1,0 +1,41 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr; /* One column by default */
+    grid-template-rows: auto 1fr auto; /* Header, Main (flexible), Footer */
+    height: 100vh;
+    margin: 0;
+  }
+  
+  header {
+    grid-row: 1;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 and 1/3 width */
+    gap: 10px; /* Spacing between columns */
+  }
+  
+  article {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  aside {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  footer {
+    grid-row: 3;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  
