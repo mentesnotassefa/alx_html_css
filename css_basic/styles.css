@@ -8,7 +8,7 @@ body {
   
   header {
     grid-row: 1;
-    background-color: #f3e51d;
+    background-color: #000000;
     padding: 10px;
     text-align: center;
   }
@@ -21,22 +21,28 @@ body {
   }
   
   article {
-    background-color: #f0e5e5;
+    background-color: #726767;
     padding: 10px;
     overflow-y: auto; /* Enable scrolling if content overflows */
+    
+    
   }
   
   aside {
     background-color: #726767;
     padding: 10px;
     overflow-y: auto; /* Enable scrolling if content overflows */
+   
   }
   
   footer {
     grid-row: 3;
-    background-color: #ce1a1a;
+    background-color: #726767;
     padding: 10px;
     text-align: center;
+  }
+  .textcolor {
+    color: white;
   }
   
   
