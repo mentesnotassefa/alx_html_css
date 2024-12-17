@@ -8,7 +8,7 @@ body {
   
   header {
     grid-row: 1;
-    background-color: #f0f0f0;
+    background-color: #f3e51d;
     padding: 10px;
     text-align: center;
   }
@@ -17,22 +17,22 @@ body {
     grid-row: 2;
     display: grid;
     grid-template-columns: 2fr 1fr; /* 2/3 and 1/3 width */
-    gap: 10px; /* Spacing between columns */
+    gap: 20px; /* Spacing between columns */
   }
   
   article {
-    background-color: #f9f9f9;
+    background-color: #f0e5e5;
     padding: 10px;
   }
   
   aside {
-    background-color: #f9f9f9;
+    background-color: #726767;
     padding: 10px;
   }
   
   footer {
     grid-row: 3;
-    background-color: #f0f0f0;
+    background-color: #ce1a1a;
     padding: 10px;
     text-align: center;
   }
