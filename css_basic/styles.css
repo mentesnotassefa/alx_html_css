@@ -23,11 +23,13 @@ body {
   article {
     background-color: #f0e5e5;
     padding: 10px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
   }
   
   aside {
     background-color: #726767;
     padding: 10px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
   }
   
   footer {
