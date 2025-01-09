@@ -5,6 +5,10 @@ body {
     color: white;
   padding: 20px;
 }
+.results h1{
+    text-align: center;
+    font-size: 50px;
+}
 
 .stats {
   text-align: center;

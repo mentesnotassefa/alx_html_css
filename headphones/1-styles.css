@@ -3,7 +3,12 @@ body {
     margin: 0;
     padding: 20px; /* for demonstration purpose */
 }
-
+h1 {
+    font-size: 2em;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
 
 .features {
   text-align: center;
