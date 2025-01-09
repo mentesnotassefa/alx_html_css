@@ -1,1 +1,98 @@
+body {
+    font-family: Source Sans Pro;
+    margin: 0;
+   background-image: url("./image/headphones_hero_2.jpg"); /* background image */
+    color: white;
+  padding: 20px;
+}
+.results h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.stats {
+  text-align: center;
+    max-width: 1000px;
+    margin: 0 auto; /* centers on the page */
+    margin-top: 150px;
+}
+
+.stats p {
+    padding: 20px;
+  line-height: 1.6;
+  font-family: Source Sans Pro; /* font family */
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.stat-item {
+    width: calc(25% - 20px); /* four columns */
+    margin: 10px;
+    text-align: center;
+}
+.stat-item p{
+    font-size: 14px;
+    margin-top: -90px;
+}
+
+.stat-pentagon {
+    position: relative; 
+    width: 170px; 
+    height: 150px; 
+    background-color: #ff6b6b; /* Coral-like color */ 
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;  /* Center the pentagon */
+  color: white;
+  font-size: 1.9em;   /* Adjust text size */
+  font-weight: bold;
+    padding-top: 20px; /* Adjust as needed */
+    z-index: -1;
+    
+}
+
+    .stat-pentagon::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 20px solid #FF6565; /* Bottom part of pentagon */
+        border-left: 50px solid transparent; /* Transparent on the left side */
+      border-right: 50px solid transparent;
+          width: 0;
+            height: 0;
+          box-sizing: border-box;
+      }
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 480px) {
+    .stats-grid {
+        flex-direction: column;
+         align-items: center; /* Stack vertically on smaller screens */
+    }
+        .stat-item {
+        width: calc(100% - 20px);
+    }
+        .stat-pentagon {
+      width: 80px; /* Adjust pentagon size on mobile */
+        height: 50px; /* adjust size on mobile */
+        font-size: 1em; /* adjust text */
+          padding-top: 15px;
+        }
+
+  .stat-pentagon::before {
+     border-bottom: 15px solid #FF6565; /* adjust for mobile */
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+  }
+
+}
+
 
