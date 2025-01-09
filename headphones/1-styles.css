@@ -1,1 +1,55 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px; /* for demonstration purpose */
+}
+
+
+.features {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto; /* center on the page */
+}
+
+.features .description {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap; /* enable wrapping items when small */
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature-item {
+    width: calc(25% - 20px); /* 4 columns, remove margin for calculation */
+    margin: 10px;
+    text-align: center;
+}
+
+.feature-icon {
+  font-size: 3em;
+  color: #FF6565; /* Pink icon color */
+    margin-bottom: 10px;
+}
+
+
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 480px) {
+
+    .feature-grid {
+        flex-direction: column; /* switch to column display on small screens */
+        align-items: center;
+    }
+      .feature-item {
+        width: calc(100% - 20px);
+    }
+
+
+}
+
 
