@@ -1,1 +1,111 @@
-
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: white;
+  }
+  
+  header {
+    background-color: #282c34; /* Dark header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo span {
+    font-size: 1.5em;
+    margin-right: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav a:hover, nav a:active {
+    color: #FF6565; /* Pink on hover/active */
+  }
+  
+  .hero {
+    background-color: #282c34; /*Dark background color */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    position: relative; /* Positioning relative for hero-text */
+    overflow: hidden; /* For image to cover the space */
+  
+  }
+  
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1; /* behind the text*/
+  
+  }
+  
+  
+  .hero-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  button {
+    background-color: #FF6565; /* Pink button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  button:hover, button:active {
+    opacity: 0.9;
+  }
+  
+  /* Media query for smaller screens (mobile) */
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav ul{
+      flex-direction: column;
+    }
+    nav li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+    .hero {
+      height: auto; /* Adjust height on smaller screens */
+    }
+    .hero-text{
+      max-width: 100%; /* remove max width on smaller screens */
+    }
+  }
+  
