@@ -4,19 +4,64 @@ body {
   
   color: white;
 }
-
-
-
 .backimage{
+  width: 100%;
+  height: 130vh;
   background-image: url("./image/headphones_hero_1.jpg");
-height: auto;
-position: absolute;
-top: 0;
-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: cover;
   z-index: -1
 
 }
+.normaldesktop {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding-bottom: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  display: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+
 
 header {
   
@@ -51,7 +96,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 nav a:hover, nav a:active {
@@ -61,7 +106,7 @@ nav a:hover, nav a:active {
 .hero {
  
   color: white;
-  padding: 40px;
+  padding: 270px;
   text-align: center;
   position: relative; /* Positioning relative for hero-text */
   overflow: hidden; /* For image to cover the space */
@@ -98,11 +143,44 @@ button {
 }
 
 button:hover, button:active {
+  background-color: #f8a0a0;
   opacity: 0.9;
 }
 
 /* Media query for smaller screens (mobile) */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  
+  .backimage {
+    background-position-x: 35%;
+    padding-bottom: 30px;
+    height: 110vh;
+  }
+  .normaldesktop {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-icon::before {
+    content: "☰";
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✖";
+    display: block;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    padding-bottom: 100px;
+  }
   .backimage {
     height: auto;
    
@@ -115,14 +193,24 @@ button:hover, button:active {
     flex-direction: column;
   }
   nav li {
-    margin-left: 0;
+    margin-left: -80px;
     margin-bottom: 10px;
+  }
+  nav a:hover{
+    color: #f50202;
+  }
+  nav li:hover{
+    color: #8d2323;
   }
   .hero {
     height: auto; /* Adjust height on smaller screens */
+    width: 80%;
+    align-items: center;
+    padding: 80px;
   }
   .hero-text{
-    max-width: 100%; /* remove max width on smaller screens */
+    width: auto;
+    /* remove max width on smaller screens */
   }
 }
 
