@@ -6,6 +6,380 @@ body {
   padding: 20px;
 }
 
+.backimage{
+  width: 100%;
+  height: 130vh;
+  background-image: url("./image/headphones_hero_1.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1
+
+}
+.normaldesktop {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding-bottom: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  display: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+
+
+header {
+  
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav a:hover, nav a:active {
+  color: #FF6565; /* Pink on hover/active */
+}
+
+.hero {
+ 
+  color: white;
+  padding: 270px;
+  text-align: center;
+  position: relative; /* Positioning relative for hero-text */
+  overflow: hidden; /* For image to cover the space */
+
+}
+
+
+.hero img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1; /* behind the text*/
+
+}
+
+
+.hero-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+button {
+  background-color: #FF6565; /* Pink button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover, button:active {
+  background-color: #f8a0a0;
+  opacity: 0.9;
+}
+
+/* Media query for smaller screens (mobile) */
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.features {
+text-align: center;
+max-width: 1000px;
+margin: 0 auto; /* center on the page */
+}
+
+.features .description {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap; /* enable wrapping items when small */
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.feature-item {
+  width: calc(25% - 20px); /* 4 columns, remove margin for calculation */
+  margin: 10px;
+  text-align: center;
+}
+
+.feature-icon {
+font-size: 3em;
+color: #FF6565; /* Pink icon color */
+  margin-bottom: 10px;
+}
+.contwhat{
+  margin-top: 800px;
+  color: rgb(0, 0, 0);
+}
+
+
+/* Media query for smaller screens (mobile) */
+
+
+.resultsimg{
+  width: 100%;
+    height: 130vh;
+    background-image: url("./image/headphones_hero_2.jpg");
+    position: absolute;
+    top: 1200;
+    left: 0;
+    object-fit: cover;
+    z-index: -1
+  
+}
+
+.results h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.stats {
+  text-align: center;
+    max-width: 1000px;
+    margin: 0 auto; /* centers on the page */
+    margin-top: 150px;
+    color: white;
+}
+
+.stats p {
+    padding: 20px;
+  line-height: 1.6;
+  font-family: Source Sans Pro; /* font family */
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.stat-item {
+    width: calc(25% - 20px); /* four columns */
+    margin: 10px;
+    text-align: center;
+}
+.stat-item p{
+    font-size: 14px;
+    margin-top: -90px;
+}
+
+.stat-pentagon {
+    position: relative; 
+    width: 170px; 
+    height: 150px; 
+    background-color: #ff6b6b; /* Coral-like color */ 
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;  /* Center the pentagon */
+  color: white;
+  font-size: 1.9em;   /* Adjust text size */
+  font-weight: bold;
+    padding-top: 20px; /* Adjust as needed */
+    z-index: -1;
+    
+}
+
+    .stat-pentagon::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 20px solid #FF6565; /* Bottom part of pentagon */
+        border-left: 50px solid transparent; /* Transparent on the left side */
+      border-right: 50px solid transparent;
+          width: 0;
+            height: 0;
+          box-sizing: border-box;
+      }
+
+      @media (max-width: 600px) {
+
+        .feature-grid {
+            flex-direction: column; /* switch to column display on small screens */
+            align-items: center;
+        }
+          .feature-item {
+            width: calc(100% - 20px);
+        }
+      
+      
+      }
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 600px) {
+    .stats-grid {
+        flex-direction: column;
+         align-items: center; /* Stack vertically on smaller screens */
+    }
+        .stat-item {
+        width: calc(100% - 20px);
+    }
+        .stat-pentagon {
+      width: 80px; /* Adjust pentagon size on mobile */
+        height: 50px; /* adjust size on mobile */
+        font-size: 1em; /* adjust text */
+          padding-top: 15px;
+        }
+
+  .stat-pentagon::before {
+     border-bottom: 15px solid #FF6565; /* adjust for mobile */
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+  }
+
+}
+@media (max-width: 600px) {
+  
+  .backimage {
+    background-position-x: 35%;
+    padding-bottom: 30px;
+    height: 110vh;
+  }
+  .normaldesktop {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-icon::before {
+    content: "☰";
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✖";
+    display: block;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    padding-bottom: 100px;
+  }
+  .backimage {
+    height: auto;
+   
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul{
+    flex-direction: column;
+  }
+  nav li {
+    margin-left: -80px;
+    margin-bottom: 10px;
+  }
+  nav a:hover{
+    color: #f50202;
+  }
+  nav li:hover{
+    color: #8d2323;
+  }
+  .hero {
+    height: auto; /* Adjust height on smaller screens */
+    width: 80%;
+    align-items: center;
+    padding: 80px;
+  }
+  .hero-text{
+    width: auto;
+    /* remove max width on smaller screens */
+  }
+}
+
+
+
 .contact-form {
   text-align: center;
     max-width: 1000px;
