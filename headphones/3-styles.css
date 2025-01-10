@@ -353,7 +353,7 @@ button:active {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 100px) {
 
   .feature-grid {
       flex-direction: column; /* switch to column display on small screens */
@@ -367,7 +367,7 @@ button:active {
 }
 
 /* Media query for smaller screens (mobile) */
-@media (max-width: 600px) {
+@media (max-width: 100px) {
 .stats-grid {
   flex-direction: column;
    align-items: center; /* Stack vertically on smaller screens */
