@@ -276,117 +276,20 @@ color: #FF6565; /* Pink icon color */
           box-sizing: border-box;
       }
 
-      @media (max-width: 600px) {
-
-        .feature-grid {
-            flex-direction: column; /* switch to column display on small screens */
-            align-items: center;
-        }
-          .feature-item {
-            width: calc(100% - 20px);
-        }
-      
-      
-      }
-
-/* Media query for smaller screens (mobile) */
-@media (max-width: 600px) {
-    .stats-grid {
-        flex-direction: column;
-         align-items: center; /* Stack vertically on smaller screens */
-    }
-        .stat-item {
-        width: calc(100% - 20px);
-    }
-        .stat-pentagon {
-      width: 80px; /* Adjust pentagon size on mobile */
-        height: 50px; /* adjust size on mobile */
-        font-size: 1em; /* adjust text */
-          padding-top: 15px;
-        }
-
-  .stat-pentagon::before {
-     border-bottom: 15px solid #FF6565; /* adjust for mobile */
-        border-left: 40px solid transparent;
-        border-right: 40px solid transparent;
-  }
-
-}
-@media (max-width: 600px) {
-  
-  .backimage {
-    background-position-x: 35%;
-    padding-bottom: 30px;
-    height: 110vh;
-  }
-  .normaldesktop {
-    display: none;
-  }
-  .menu-icon {
-    display: block;
-  }
-  .menu-icon::before {
-    content: "☰";
-  }
-
-  #menu-toggle:checked + .menu-icon + .menu {
-    display: block;
-  }
-
-  #menu-toggle:checked + .menu-icon::before {
-    content: "✖";
-    display: block;
-  }
-  .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    padding: 10px;
-    padding-bottom: 100px;
-  }
-  .backimage {
-    height: auto;
-   
-  }
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul{
-    flex-direction: column;
-  }
-  nav li {
-    margin-left: -80px;
-    margin-bottom: 10px;
-  }
-  nav a:hover{
-    color: #f50202;
-  }
-  nav li:hover{
-    color: #8d2323;
-  }
-  .hero {
-    height: auto; /* Adjust height on smaller screens */
-    width: 80%;
-    align-items: center;
-    padding: 80px;
-  }
-  .hero-text{
-    width: auto;
-    /* remove max width on smaller screens */
-  }
-}
+    
 
 
 
 .contact-form {
+ margin-top: 200px;
+ margin-bottom: 100px;
   text-align: center;
     max-width: 1000px;
-    margin: 0 auto;  /* Center horizontally */
+    
 }
 
 .contact-form h2 {
+
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -435,10 +338,110 @@ button:active {
 
 
 /* Media query for smaller screens (mobile) */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .contact-form input, .contact-form textarea {
         width: calc(100% - 10px);
     }
 }
 
+@media (max-width: 600px) {
 
+  .feature-grid {
+      flex-direction: column; /* switch to column display on small screens */
+      align-items: center;
+  }
+    .feature-item {
+      width: calc(100% - 20px);
+  }
+
+
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 600px) {
+.stats-grid {
+  flex-direction: column;
+   align-items: center; /* Stack vertically on smaller screens */
+}
+  .stat-item {
+  width: calc(100% - 20px);
+}
+  .stat-pentagon {
+width: 80px; /* Adjust pentagon size on mobile */
+  height: 50px; /* adjust size on mobile */
+  font-size: 1em; /* adjust text */
+    padding-top: 15px;
+  }
+
+.stat-pentagon::before {
+border-bottom: 15px solid #FF6565; /* adjust for mobile */
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
+}
+@media (max-width: 600px) {
+
+.backimage {
+background-position-x: 35%;
+padding-bottom: 30px;
+height: 110vh;
+}
+.normaldesktop {
+display: none;
+}
+.menu-icon {
+display: block;
+}
+.menu-icon::before {
+content: "☰";
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+display: block;
+}
+
+#menu-toggle:checked + .menu-icon::before {
+content: "✖";
+display: block;
+}
+.header-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: auto;
+padding: 10px;
+padding-bottom: 100px;
+}
+.backimage {
+height: auto;
+
+}
+header {
+flex-direction: column;
+align-items: center;
+}
+nav ul{
+flex-direction: column;
+}
+nav li {
+margin-left: -80px;
+margin-bottom: 10px;
+}
+nav a:hover{
+color: #f50202;
+}
+nav li:hover{
+color: #8d2323;
+}
+.hero {
+height: auto; /* Adjust height on smaller screens */
+width: 80%;
+align-items: center;
+padding: 80px;
+}
+.hero-text{
+width: auto;
+/* remove max width on smaller screens */
+}
+}
