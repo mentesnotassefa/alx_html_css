@@ -152,7 +152,7 @@ button:hover, button:active {
 }
 
 /* Media query for smaller screens (mobile) */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   
   .backimage {
     background-position-x: 35%;

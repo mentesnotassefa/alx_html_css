@@ -3,214 +3,243 @@ body {
     margin: 0;
     padding: 20px; /* for demonstration purpose */
 }
+
+
 .backimage{
-    width: 100%;
-    height: 130vh;
-    background-image: url("./image/headphones_hero_1.jpg");
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -1
+  width: 100%;
+  height: 130vh;
+  background-image: url("./image/headphones_hero_1.jpg");
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+ 
+
+}
+.normaldesktop {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding-bottom: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  display: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+
+
+header {
   
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav a:hover, nav a:active {
+  color: #FF6565; /* Pink on hover/active */
+  font-weight: bold;
+}
+
+.hero {
+ 
+  color: white;
+  padding: 270px;
+  text-align: center;
+  position: relative; /* Positioning relative for hero-text */
+  overflow: hidden; /* For image to cover the space */
+
+}
+
+
+.hero img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1; /* behind the text*/
+
+}
+
+
+.hero-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  background-color: #e3c8c8; /* Pink button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+button:hover, button:active {
+  background-color: #ff0404;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 480px) {
+  
+  .backimage {
+    background-position-x: 35%;
+    padding-bottom: 30px;
+    height: 110vh;
   }
   .normaldesktop {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    align-items: center;
-  }
-  
-  .menu {
     display: none;
-    position: absolute;
-    top: 70px;
-    left: 150px;
-    list-style: none;
-    padding-left: 20px;
   }
-  
-  .menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    padding-bottom: 30px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: white;
+  .menu-icon {
     display: block;
   }
-  
-  .menu-icon {
-    position: absolute;
-    top: 40px;
-    left: 30px;
-    display: none;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
+  .menu-icon::before {
+    content: "☰";
   }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  
-  header {
+
+  #menu-toggle:checked + .menu-icon + .menu  {
+    display: block;
+    color: #ff0404;
     
-    padding: 20px;
+    
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✖";
+    display: block;
+    animation:forwards;
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+    
+  }
+  .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    width: auto;
+    padding: 10px;
+    padding-bottom: 100px;
   }
-  
-  .logo {
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo span {
-    font-size: 1.5em;
-    margin-right: 5px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav li {
-    margin-left: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-  
-  nav a:hover, nav a:active {
-    color: #FF6565; /* Pink on hover/active */
-  }
-  
-  .hero {
-   
-    color: white;
-    padding: 270px;
-    text-align: center;
-    position: relative; /* Positioning relative for hero-text */
-    overflow: hidden; /* For image to cover the space */
-  
-  }
-  
-  
-  .hero img {
-    width: 100%;
+  .backimage {
     height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -1; /* behind the text*/
-  
+   
   }
-  
-  
-  .hero-text {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px;
+  header {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  button {
-    background-color: #FF6565; /* Pink button */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
+  nav ul{
+    flex-direction: column;
   }
-  
-  button:hover, button:active {
-    background-color: #f8a0a0;
-    opacity: 0.9;
+  nav li {
+    margin-left: -80px;
+    margin-bottom: 10px;
   }
-  
-  /* Media query for smaller screens (mobile) */
-  @media (max-width: 600px) {
-    
-    .backimage {
-      background-position-x: 35%;
-      padding-bottom: 30px;
-      height: 110vh;
-    }
-    .normaldesktop {
-      display: none;
-    }
-    .menu-icon {
-      display: block;
-    }
-    .menu-icon::before {
-      content: "☰";
-    }
-  
-    #menu-toggle:checked + .menu-icon + .menu {
-      display: block;
-    }
-  
-    #menu-toggle:checked + .menu-icon::before {
-      content: "✖";
-      display: block;
-    }
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: auto;
-      padding: 10px;
-      padding-bottom: 100px;
-    }
-    .backimage {
-      height: auto;
-     
-    }
-    header {
-      flex-direction: column;
-      align-items: center;
-    }
-    nav ul{
-      flex-direction: column;
-    }
-    nav li {
-      margin-left: -80px;
-      margin-bottom: 10px;
-    }
-    nav a:hover{
-      color: #f50202;
-    }
-    nav li:hover{
-      color: #8d2323;
-    }
-    .hero {
-      height: auto; /* Adjust height on smaller screens */
-      width: 80%;
-      align-items: center;
-      padding: 80px;
-    }
-    .hero-text{
-      width: auto;
-      /* remove max width on smaller screens */
-    }
+  nav a:hover{
+    color: #f50202;
   }
-h1 {
+  nav li:hover{
+    color: #8d2323;
+  }
+  .hero {
+    height: auto; /* Adjust height on smaller screens */
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    margin-top: 100px;
+  }
+  .hero-text{
+    width: auto;
+    /* remove max width on smaller screens */
+  }
+}
+
+
+
+.contwhat h1 {
     font-size: 2em;
     margin: 0;
     padding: 20px;
@@ -253,7 +282,7 @@ h1 {
 
 
 /* Media query for smaller screens (mobile) */
-@media (max-width: 100px) {
+@media (max-width: 480px) {
 
     .feature-grid {
         flex-direction: column; /* switch to column display on small screens */
@@ -264,7 +293,48 @@ h1 {
     }
 
 
+
 }
+@media (max-width: 768px) {
+  .backimage {
+    background-position-x: 35%;
+    padding-bottom: 30px;
+    height: 110vh;
+  }
+
+  .hero {
+    height: auto; /* Adjust height on smaller screens */
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    margin-top: 150px;
+  }
+  .hero-text{
+    margin-left: 40px;
+    margin-right: 40px;
+    width: auto;
+    /* remove max width on smaller screens */
+  }
+  .feature-grid {
+    width: 700px;
+    margin: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+}
+
+  
+
+@media (max-width: 480px) {
+  .feature-grid {
+    width: auto;
+    margin: 0 auto;
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 
 
