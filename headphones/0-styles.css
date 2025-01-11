@@ -9,6 +9,7 @@ body {
   height: 130vh;
   background-image: url("./image/headphones_hero_1.jpg");
   position: absolute;
+  background-repeat: no-repeat;
   top: 0;
   left: 0;
   object-fit: cover;
@@ -101,6 +102,7 @@ nav a {
 
 nav a:hover, nav a:active {
   color: #FF6565; /* Pink on hover/active */
+  font-weight: bold;
 }
 
 .hero {
@@ -129,11 +131,11 @@ nav a:hover, nav a:active {
 .hero-text {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
 }
 
 button {
-  background-color: #FF6565; /* Pink button */
+  background-color: #ef9b9b; /* Pink button */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -143,7 +145,7 @@ button {
 }
 
 button:hover, button:active {
-  background-color: #f8a0a0;
+  background-color: #ff0404;
   opacity: 0.9;
 }
 
@@ -204,9 +206,10 @@ button:hover, button:active {
   }
   .hero {
     height: auto; /* Adjust height on smaller screens */
-    width: 80%;
+    width: 100%;
     align-items: center;
-    padding: 80px;
+    padding: 10px;
+    margin-top: 100px;
   }
   .hero-text{
     width: auto;
