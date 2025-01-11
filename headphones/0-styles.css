@@ -135,18 +135,20 @@ nav a:hover, nav a:active {
 }
 
 button {
-  background-color: #ef9b9b; /* Pink button */
+  background-color: #e3c8c8; /* Pink button */
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   margin-top: 20px;
   cursor: pointer;
+  border-radius: 50px;
 }
 
 button:hover, button:active {
   background-color: #ff0404;
   opacity: 0.9;
+  font-size: 20px;
 }
 
 /* Media query for smaller screens (mobile) */
@@ -167,13 +169,30 @@ button:hover, button:active {
     content: "☰";
   }
 
-  #menu-toggle:checked + .menu-icon + .menu {
+  #menu-toggle:checked + .menu-icon + .menu  {
     display: block;
+    color: #ff0404;
+    
+    
   }
 
   #menu-toggle:checked + .menu-icon::before {
     content: "✖";
     display: block;
+    animation:forwards;
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+    
   }
   .header-content {
     display: flex;
