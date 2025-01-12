@@ -169,11 +169,13 @@ font-size: 20px;
 text-align: center;
 max-width: 1000px;
 margin: 0 auto; /* center on the page */
+cursor: pointer;
 }
 
 .features .description {
   padding: 20px;
   line-height: 1.6;
+  cursor: pointer;
 }
 
 
@@ -182,19 +184,31 @@ margin: 0 auto; /* center on the page */
   flex-wrap: wrap; /* enable wrapping items when small */
   justify-content: space-around;
   margin-top: 20px;
+
 }
 
 .feature-item {
   width: calc(25% - 20px); /* 4 columns, remove margin for calculation */
   margin: 10px;
   text-align: center;
+  cursor: pointer;
+
+  
+
+}
+.feature-item:hover {
+  transform: scale(1.25); /* slightly enlarge on hover */
+  animation: ease-in-out;
 }
 
 .feature-icon {
 font-size: 3em;
-color: #FF6565; /* Pink icon color */
+color: #b20b0b; /* Pink icon color */
   margin-bottom: 10px;
+  cursor: pointer;
+  
 }
+
 .contwhat{
   margin-top: 800px;
 }
@@ -209,7 +223,7 @@ color: #FF6565; /* Pink icon color */
     position: relative;
     background-repeat: no-repeat;
     object-fit: cover;
-    z-index: 1;
+    
     
     
   
@@ -247,12 +261,21 @@ color: #FF6565; /* Pink icon color */
     width: calc(25% - 20px); /* four columns */
     margin: 10px;
     text-align: center;
+    cursor: pointer;
+    z-index: 1;
+  
 }
+.stat-item:hover {
+  transform: scale3d(1.1, 1.2, 1.3);
+  animation: bounce 1s ease-in-out infinite;
+}
+
 .stat-item p{
     font-size: 14px;
     margin-top: -90px;
     margin-left: 10px;
     z-index: -1;
+   
     
 }
 
@@ -272,6 +295,7 @@ color: #FF6565; /* Pink icon color */
   font-weight: bold;
     padding-top: 20px; /* Adjust as needed */
     z-index: -1;
+    
     
     
 }
@@ -582,7 +606,7 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-top: 20px;
     cursor: pointer;
 }
