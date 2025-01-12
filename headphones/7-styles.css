@@ -352,12 +352,12 @@ color: #b20b0b; /* Pink icon color */
   background-repeat: repeat;
   background-position-x: 10% ;
     padding-bottom: 100px;
-    aspect-ratio: 7/4;
+    aspect-ratio: 1/4;
   }
   
     .stats-grid {
        display: grid;
-       grid-template-columns: 1fr;
+       grid-template-columns: auto;
          align-items: center; /* Stack vertically on smaller screens */
          margin-left: -50px;
          
@@ -392,6 +392,9 @@ color: #b20b0b; /* Pink icon color */
      border-bottom: 15px solid #FF6565; /* adjust for mobile */
         border-left: 40px solid transparent;
         border-right: 40px solid transparent;
+        display: grid;
+        grid-template-columns: auto;
+        
         
   }
   .feature-grid {
