@@ -202,12 +202,14 @@ color: #FF6565; /* Pink icon color */
 /* Media query for smaller screens (mobile) */
 
 .resultsimg{
-  width: 100%;
-    height: 130vh;
+     width: 100%;
+    height: 100%;
     background-image: url("./image/headphones_hero_2.jpg");
-    position: absolute;
+    position: relative;
     background-repeat: no-repeat;
     object-fit: cover;
+    z-index: 1;
+    
     
   
 }
@@ -223,7 +225,7 @@ color: #FF6565; /* Pink icon color */
   text-align: center;
     max-width: 1000px;
     margin: 0 auto; /* centers on the page */
-    margin-top: 10px;
+    margin-top: 100px;
     color: white;
 }
 
@@ -248,7 +250,11 @@ color: #FF6565; /* Pink icon color */
 .stat-item p{
     font-size: 14px;
     margin-top: -90px;
+    margin-left: 10px;
+    z-index: -1;
+    
 }
+
 
 .stat-pentagon {
     position: relative; 
@@ -264,6 +270,8 @@ color: #FF6565; /* Pink icon color */
   font-size: 1.9em;   /* Adjust text size */
   font-weight: bold;
     padding-top: 20px; /* Adjust as needed */
+    z-index: -1;
+    
     
 }
 
@@ -283,42 +291,8 @@ color: #FF6565; /* Pink icon color */
     
 
 /* Media query for smaller screens (mobile) */
-@media (max-width: 480px) {
-    .stats-grid {
-        flex-direction: column;
-         align-items: center; /* Stack vertically on smaller screens */
-    }
-        .stat-item {
-        width: calc(100% - 20px);
-    }
-        .stat-pentagon {
-      width: 80px; /* Adjust pentagon size on mobile */
-        height: 50px; /* adjust size on mobile */
-        font-size: 1em; /* adjust text */
-          padding-top: 15px;
-        }
 
-  .stat-pentagon::before {
-     border-bottom: 15px solid #FF6565; /* adjust for mobile */
-        border-left: 40px solid transparent;
-        border-right: 40px solid transparent;
-  }
-
-}
-@media (max-width: 480px) {
-
-  .feature-grid {
-      flex-direction: column; /* switch to column display on small screens */
-      align-items: center;
-  }
-    .feature-item {
-      width: calc(100% - 20px);
-  }
-
-
-
-}
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 .backimage {
   background-position-x: 35%;
   padding-bottom: 30px;
@@ -344,18 +318,74 @@ color: #FF6565; /* Pink icon color */
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
+
 }
 
-
-
 @media (max-width: 480px) {
+  .resultsimg{
+    width: 100%;
+    height: 100px;
+  background-repeat: repeat;
+  background-position-x: 100% ;
+    padding-bottom: 2000px;
+    aspect-ratio: 7/4;
+  }
+  
+    .stats-grid {
+       display: grid;
+       grid-template-columns: 1fr;
+         align-items: center; /* Stack vertically on smaller screens */
+         margin-left: -50px;
+         height: 1000px;
+    }
+        .stat-item {
+        width: calc(100% - 20px);
+        
+        
+        
+        
+    }
+    .stat-item p {
+     width: 100px;
+      
+    }
+    .stats{
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 200px;
+    }
+        .stat-pentagon {
+      width: 80px; /* Adjust pentagon size on mobile */
+        height: 50px; /* adjust size on mobile */
+        font-size: 1em; /* adjust text */
+        margin: 100px;
+          
+        }
+
+  .stat-pentagon::before {
+     border-bottom: 15px solid #FF6565; /* adjust for mobile */
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        
+  }
+  .feature-grid {
+    flex-direction: row; /* switch to column display on small screens */
+    align-items: center;
+}
+  .feature-item {
+    width: calc(100% - 20px);
+}
 .feature-grid {
   width: auto;
   margin: 0 auto;
   gap: 30px;
   grid-template-columns: 1fr;
 }
+
+
 }
+
+
 @media (max-width: 480px) {
 
   .backimage {
@@ -439,3 +469,67 @@ color: #FF6565; /* Pink icon color */
     /* remove max width on smaller screens */
   }
   }
+@media (max-width: 800px) {
+  
+  .resultsimg{
+    width: 100%;
+    height: 1000px;
+  background-repeat: repeat;
+  background-position-x: 100% ;
+    padding-bottom: 200px;
+    aspect-ratio: 1/4;
+  }
+  
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+         align-items: center; /* Stack vertically on smaller screens */
+         margin-left: -50px;
+    }
+        .stat-item {
+        width: calc(100% - 10px);
+        
+        
+        
+    }
+    .stat-item p {
+     width: 200px;
+     font-size: large;
+     margin-top: -100px;
+     margin-left: 40px;
+     
+      
+    }
+
+   
+    .stats{
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 200px;
+    }
+        .stat-pentagon {
+      width: 230px; /* Adjust pentagon size on mobile */
+        height: 200px; /* adjust size on mobile */
+        font-size: 3em; /
+    .stats{
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 200px;
+    }
+        .stat-pentagon {
+      width: 230px; /* Adjust pentagon size on mobile */
+        height: 200px; /* adjust size on mobile */
+        font-size: 1em; /* adjust text */
+        margin: 50px;
+          
+        }
+
+  .stat-pentagon::before {
+     border-bottom: 15px solid #FF6565; /* adjust for mobile */
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        
+  }
+  
+} }
+
